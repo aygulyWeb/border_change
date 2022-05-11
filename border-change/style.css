@@ -8,11 +8,34 @@ body{
 	font-family: sans-serif;
 }
 .wrapper{
-	margin: 200px auto;
+	margin:0px auto;
+	max-width: 800px;
+	padding-top: 200px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
+	
+}
+.border__block{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+label{
+	display: block;
+	padding-right: 20px;
+	}
+.border__change{
+	width: 200px;
+	height: 200px;
+	border: 2px solid green;
+}
+.border__square{
+	width: 300px;
+	height: 200px;
+	border: 2px solid grey;
+	
 }
 span{
 	display: block;
+	padding: 5px;
 }

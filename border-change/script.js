@@ -1,41 +1,40 @@
-const range = document.querySelectorAll('input');
-const border = document.querySelectorAll('.border');
-const square = document.querySelector('.square');
-border.innerHTML = range.value;
+const border__topRight = document.querySelector('#border__topRight');
+const border__topLeft = document.querySelector('#border__topLeft');
+const border__bottomRight = document.querySelector('#border__bottomRight');
+const border__bottomLeft = document.querySelector('#border__bottomLeft');
+const border__change = document.querySelector('.border__change');
+const border__square = document.querySelector('.border__square');
+
+const border__text1 = document.querySelector('.border__text1');
+const border__text2 = document.querySelector('.border__text2');
+const border__text3 = document.querySelector('.border__text3');
+const border__text4 = document.querySelector('.border__text4');
 
 
-// range.forEach(item => {
-// 	item.addEventListener('input', () => {
-// 		console.log(item.value)
-// 		border.forEach(elem => {
-// 			elem.innerHTML = item.value;
-// 		})
-// 	})
-// })
 
-range.forEach(item => {
-	square.style = `
-	border: 2px solid green;
-	
-`;
-	item.addEventListener('input', () => {
-		square.style.width = `100px`
-		square.style.height = `100px`
-		square.style.borderTopRightRadius = `${item.value[0]}px`
-		square.style.borderTopLeftRadius = `${item.value[1]}px`
-		square.style.borderBottomRightRadius = `${item.value[2]}px`
-		square.style.borderBottomLeftRadius = `${item.value[3]}px`
-		console.log(item.value)
-	})
-})
+border__topRight.addEventListener('input', () => {
+	border__change.style.borderTopRightRadius = `${border__topRight.value}px`
+	border__text1.innerHTML = `<span id="border__text1">border-top-right-radius: ${border__topRight.value}px</span>`
 
-// range.addEventListener('input', () => {
-// 	square.style.width = `${range.value}px`
-// 	square.style.height = `${range.value}px`
-// 	square.style.borderTopRightRadius = `${range.value}px`
-// 	square.style.borderTopLeftRadius = `${range.value}px`
-// 	square.style.borderBottomRightRadius = `${range.value}px`
-// 	square.style.borderBottomLeftRadius = `${range.value}px`
-// })
+});
+
+border__topLeft.addEventListener('input', () => {
+	border__change.style.borderTopLeftRadius = `${border__topLeft.value}px`
+	border__text2.innerHTML = `<span id="border__text2">border-top-left-radius: ${border__topLeft.value}px</span>`
+
+});
+
+border__bottomRight.addEventListener('input', () => {
+	border__change.style.borderBottomRightRadius = `${border__bottomRight.value}px`
+	border__text3.innerHTML = `<span id="border__text3">border-bottom-right-radius: ${border__bottomRight.value}px</span>`
+});
+
+border__bottomLeft.addEventListener('input', () => {
+	border__change.style.borderBottomLeftRadius = `${border__bottomLeft.value}px`
+	border__text4.innerHTML = `<span id="border__text4">border-bottom-left-radius: ${border__bottomLeft.value}px</span>`
+});
+
+
+
 
 

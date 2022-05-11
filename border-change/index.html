@@ -11,24 +11,36 @@
 
 <body>
 	<div class="wrapper">
-		<form action="#">
-			<label for="#">Top right</label>
-			<input type="range" min="0" max="200">
-			<span class="border"></span>
+		<div class="border__change"></div>
+		<form class="border__wrap" action="#">
+			<div class="border__block border__right">
+				<label for="#">Top right</label>
+				<input type="range" id="border__topRight" min="0" max="200">
+			</div>
 
-			<label for="#">Top left</label>
-			<input type="range">
-			<span class="border"></span>
+			<div class="border__block border__left">
+				<label for="#">Top left</label>
+				<input type="range" id="border__topLeft" min="0" max="200">
+			</div>
 
-			<label for="#">Bottom right</label>
-			<input type="range">
-			<span class="border"></span>
+			<div class="border__block  border__top">
+				<label for="#">Bottom right</label>
+				<input type="range" id="border__bottomRight" min="0" max="200">
+			</div>
 
-			<label for="#">Bottom right</label>
-			<input type="range">
-			<span class="border"></span>
+			<div class="border__block border__bottom">
+				<label for="#">Bottom right</label>
+				<input type="range" id="border__bottomLeft" min="0" max="200">
+			</div>
 		</form>
-		<div class="square"></div>
+		<div class="border__square">
+			<span class="border__text1"></span>
+			<span class="border__text2"></span>
+			<span class="border__text3"></span>
+			<span class="border__text4"></span>
+
+		</div>
+
 	</div>
 
 
